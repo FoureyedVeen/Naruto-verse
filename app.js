@@ -1,6 +1,6 @@
-// const api_url = "https://naruto-details.herokuapp.com/clan";
+// const api_url = "https://api.github.com/octocat";
 
-// async function getapi(url) {
+// async function getApi(url) {
 
 //     const response = await fetch(url);
 
@@ -8,13 +8,14 @@
 //     data.length;
 //     console.log(data);
 // }
-// getapi(api_url);
-async function getApi(url) {
-const response = await fetch("https://naruto-details.herokuapp.com/clan", {mode: 'no-cors'})
-    // .then(response => response.json() )
-    .then(data => {
+// getApi(api_url);
+
+async function getApi() {
+const response = await fetch("https://api.github.com/octocat")
+    .then(response => response.json()) 
+    // .then(data => {
         console.log(data);
         return data;
-    })
-}
+    }
+
 getApi();
